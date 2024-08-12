@@ -1,7 +1,6 @@
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from debug_toolbar.toolbar import debug_toolbar_urls
 
 
 from .views import (
@@ -44,7 +43,6 @@ urlpatterns = [
         DriverDetailView.as_view(),
         name="driver-detail"
     )
-] + static(settings.STATIC_URL,
-           document_root=settings.STATIC_ROOT) + debug_toolbar_urls()
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 app_name = "taxi"
