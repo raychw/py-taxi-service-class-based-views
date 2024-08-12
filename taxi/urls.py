@@ -44,6 +44,7 @@ urlpatterns = [
         DriverDetailView.as_view(),
         name="driver-detail"
     )
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + debug_toolbar_urls()
+] + static(settings.STATIC_URL,
+           document_root=settings.STATIC_ROOT) + debug_toolbar_urls()
 
 app_name = "taxi"
